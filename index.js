@@ -10,6 +10,7 @@ module.exports = {
     '@typescript-eslint/comma-dangle': ['warn', 'always-multiline'],
     '@typescript-eslint/strict-boolean-expressions': 'off',
     '@typescript-eslint/explicit-function-return-type': 'off',
+    '@typescript-eslint/triple-slash-reference': 'off',
     'react/self-closing-comp': ['warn', { component: true, html: true }],
     'react/jsx-sort-props': [
       'warn',
