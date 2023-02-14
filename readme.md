@@ -1,5 +1,7 @@
 # @jannchie/eslint-config
 
+[![CodeTime badge](https://img.shields.io/endpoint?style=&url=https%3A%2F%2Fapi.codetime.dev%2Fshield%3Fid%3D1%26project%3Deslint-config%26in%3D0)](https://codetime.dev)
+
 `@jannchie/eslint-config` is a shareable ESLint configuration that provides a set of rules and configurations for linting JavaScript code. This package includes rules for enforcing common best practices, code consistency, and possible errors.
 
 ## Installation
