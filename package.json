@@ -1,6 +1,6 @@
 {
   "name": "@jannchie/eslint-config",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Jannchie's eslint config.",
   "main": "index.js",
   "scripts": {
@@ -15,18 +15,20 @@
   "peerDependencies": {
     "eslint": ">= 8"
   },
-  "devDependencies": {
-    "@jannchie/eslint-config": "file:.",
+  "dependencies": {
     "@typescript-eslint/eslint-plugin": "^5.51.0",
     "@typescript-eslint/parser": "^5.51.0",
-    "eslint": "^8.34.0",
     "eslint-config-standard-with-typescript": "^34.0.0",
     "eslint-plugin-import": "^2.25.3",
     "eslint-plugin-jsx-a11y": "^6.5.1",
     "eslint-plugin-n": "^15.6.1",
     "eslint-plugin-promise": "^6.1.1",
     "eslint-plugin-react": "^7.32.2",
-    "eslint-plugin-react-hooks": "^4.3.0",
+    "eslint-plugin-react-hooks": "^4.3.0"
+  },
+  "devDependencies": {
+    "@jannchie/eslint-config": "file:.",
+    "eslint": "^8.34.0",
     "typescript": "^4.9.5"
   },
   "publishConfig": {
