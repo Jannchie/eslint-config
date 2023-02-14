@@ -7,6 +7,9 @@ module.exports = {
   extends: [
     '@jannchie',
   ],
+  plugins: [
+    'react',
+  ],
   rules: {
   },
-};
+}
