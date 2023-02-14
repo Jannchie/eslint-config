@@ -21,6 +21,11 @@ module.exports = {
       },
     ],
   },
+  plugins: [
+    'react',
+    'react-hooks',
+    'jsx-a11y',
+  ],
   extends: [
     'plugin:react/recommended',
     'plugin:react-hooks/recommended',
