@@ -11,7 +11,22 @@ module.exports = {
     '@typescript-eslint/strict-boolean-expressions': 'off',
     '@typescript-eslint/explicit-function-return-type': 'off',
     '@typescript-eslint/triple-slash-reference': 'off',
+    'no-console': 'warn',
+    'no-debugger': 'warn',
+    'no-constant-condition': 'warn',
     'react/self-closing-comp': ['warn', { component: true, html: true }],
+    'react/jsx-curly-spacing': ['error', {
+      when: 'always',
+      children: true,
+      attributes: {
+        allowMultiline: false,
+        when: 'never',
+      },
+      spacing: {
+        objectLiterals: 'never',
+      },
+    }],
+    'react/jsx-curly-brace-presence': ['error', { children: 'always', props: 'never' }],
     'react/jsx-sort-props': [
       'warn',
       {
