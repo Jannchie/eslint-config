@@ -15,7 +15,7 @@ module.exports = {
     'no-debugger': 'warn',
     'no-constant-condition': 'warn',
     'react/self-closing-comp': ['warn', { component: true, html: true }],
-    'react/jsx-curly-spacing': ['error', {
+    'react/jsx-curly-spacing': ['warn', {
       when: 'always',
       children: true,
       attributes: {
@@ -26,7 +26,6 @@ module.exports = {
         objectLiterals: 'never',
       },
     }],
-    'react/jsx-curly-brace-presence': ['error', { children: 'always', props: 'never' }],
     'react/jsx-sort-props': [
       'warn',
       {
