@@ -1,5 +1,6 @@
 module.exports = {
   rules: {
+    'react/jsx-indent': ['warn', 2],
     indent: ['warn', 2, { SwitchCase: 1 }],
     '@typescript-eslint/indent': ['warn', 2, { SwitchCase: 1 }],
     'jsx-quotes': ['warn', 'prefer-double'],
