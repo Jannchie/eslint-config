@@ -59,7 +59,6 @@ module.exports = {
     'plugin:react/recommended',
     'plugin:react-hooks/recommended',
     'plugin:react/jsx-runtime',
-    'standard-with-typescript',
     'plugin:jsx-a11y/recommended',
   ],
   parserOptions: {
