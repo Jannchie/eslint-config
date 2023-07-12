@@ -1,6 +1,6 @@
 {
   "name": "@jannchie/eslint-config",
-  "version": "1.3.1",
+  "version": "1.3.2",
   "description": "Jannchie's eslint config.",
   "main": "index.js",
   "scripts": {
