@@ -12,6 +12,7 @@ module.exports = {
     '@typescript-eslint/strict-boolean-expressions': 'off',
     '@typescript-eslint/explicit-function-return-type': 'off',
     '@typescript-eslint/triple-slash-reference': 'off',
+    "@typescript-eslint/no-explicit-any": "off",
     'no-console': 'warn',
     'no-debugger': 'warn',
     'no-constant-condition': 'warn',

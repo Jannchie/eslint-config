@@ -1,4 +1,6 @@
-export function B () {
+import React from 'react';
+export function A () {
+  React.useEffect(() => { })
   return (
     <>
       <div
