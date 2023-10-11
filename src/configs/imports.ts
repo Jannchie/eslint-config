@@ -1,5 +1,5 @@
-import type { ConfigItem, OptionsStylistic } from '../types'
 import { pluginAntfu, pluginImport } from '../plugins'
+import type { ConfigItem, OptionsStylistic } from '../types'
 
 export function imports(options: OptionsStylistic = {}): ConfigItem[] {
   const {

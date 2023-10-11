@@ -1,8 +1,7 @@
-import process from 'node:process'
 import fs from 'node:fs'
-import { isPackageExists } from 'local-pkg'
+import process from 'node:process'
 import gitignore from 'eslint-config-flat-gitignore'
-import type { ConfigItem, OptionsConfig } from './types'
+import { isPackageExists } from 'local-pkg'
 import {
   comments,
   ignores,
@@ -21,6 +20,8 @@ import {
   vue,
   yaml,
 } from './configs'
+import { jannchie } from './jannchie'
+import type { ConfigItem, OptionsConfig } from './types'
 import { combine } from './utils'
 
 const flatConfigProps: (keyof ConfigItem)[] = [
@@ -59,8 +60,9 @@ export function antfu(options: OptionsConfig & ConfigItem = {}, ...userConfigs: 
     : typeof options.stylistic === 'object'
       ? options.stylistic
       : {}
-  if (stylisticOptions && !('jsx' in stylisticOptions))
+  if (stylisticOptions && !('jsx' in stylisticOptions)) {
     stylisticOptions.jsx = options.jsx ?? true
+  }
 
   const configs: ConfigItem[][] = []
 
@@ -68,10 +70,11 @@ export function antfu(options: OptionsConfig & ConfigItem = {}, ...userConfigs: 
     if (typeof enableGitignore !== 'boolean') {
       configs.push([gitignore(enableGitignore)])
     }
-    else {
-      if (fs.existsSync('.gitignore'))
+
+    else
+      if (fs.existsSync('.gitignore')) {
         configs.push([gitignore()])
-    }
+      }
   }
 
   // Base configs
@@ -92,8 +95,9 @@ export function antfu(options: OptionsConfig & ConfigItem = {}, ...userConfigs: 
     unicorn(),
   )
 
-  if (enableVue)
+  if (enableVue) {
     componentExts.push('vue')
+  }
 
   if (enableTypeScript) {
     configs.push(typescript({
@@ -105,8 +109,9 @@ export function antfu(options: OptionsConfig & ConfigItem = {}, ...userConfigs: 
     }))
   }
 
-  if (stylisticOptions)
+  if (stylisticOptions) {
     configs.push(stylistic(stylisticOptions))
+  }
 
   if (options.test ?? true) {
     configs.push(test({
@@ -148,15 +153,22 @@ export function antfu(options: OptionsConfig & ConfigItem = {}, ...userConfigs: 
     }))
   }
 
+  if (options.jannchie ?? true) {
+    configs.push(jannchie())
+  }
+
   // User can optionally pass a flat config item to the first argument
   // We pick the known keys as ESLint would do schema validation
   const fusedConfig = flatConfigProps.reduce((acc, key) => {
-    if (key in options)
+    if (key in options) {
       acc[key] = options[key] as any
+    }
+
     return acc
   }, {} as ConfigItem)
-  if (Object.keys(fusedConfig).length)
+  if (Object.keys(fusedConfig).length) {
     configs.push([fusedConfig])
+  }
 
   const merged = combine(
     ...configs,

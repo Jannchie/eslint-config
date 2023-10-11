@@ -1,9 +1,9 @@
 // @ts-check
 import sortKeys from 'eslint-plugin-sort-keys'
 import styleMigrate from '@stylistic/eslint-plugin-migrate'
-import antfu from './dist/index.js'
+import jannchie from './dist/index.js'
 
-export default antfu(
+export default jannchie(
   {
     vue: true,
     typescript: true,

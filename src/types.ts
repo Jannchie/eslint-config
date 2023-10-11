@@ -1,5 +1,3 @@
-import type { FlatGitignoreOptions } from 'eslint-config-flat-gitignore'
-import type { ParserOptions } from '@typescript-eslint/parser'
 import type {
   EslintCommentsRules,
   EslintRules,
@@ -17,6 +15,8 @@ import type {
   VueRules,
   YmlRules,
 } from '@antfu/eslint-define-config'
+import type { ParserOptions } from '@typescript-eslint/parser'
+import type { FlatGitignoreOptions } from 'eslint-config-flat-gitignore'
 import type { Rules as AntfuRules } from 'eslint-plugin-antfu'
 import type { StylisticRules } from './generated/stylistic'
 
@@ -176,6 +176,11 @@ export interface OptionsConfig extends OptionsComponentExts {
    * @default auto-detect based on the process.env
    */
   isInEditor?: boolean
+
+  /**
+   * Enable Jannchie's rules.
+   */
+  jannchie?: boolean
 
   /**
    * Provide overrides for rules for each integration.

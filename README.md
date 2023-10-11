@@ -1,6 +1,18 @@
-# @antfu/eslint-config
+# @jannchie/eslint-config
 
-[![npm](https://img.shields.io/npm/v/@antfu/eslint-config?color=444&label=)](https://npmjs.com/package/@antfu/eslint-config) [![code style](https://antfu.me/badge-code-style.svg)](https://github.com/antfu/eslint-config)
+> [!WARNING]
+> This repository is forked from @jannchie/eslint-config. It is essentially the same as the original repository but includes some configurations that are better suited to my needs.
+
+Main Difference from the original repository:
+
+- Global
+  - Always use `error` instead of `warn`
+- Vue
+  - Enforce the maximum number of attributes per line
+- JS/TS
+  - Enforce consistent brace style for all control statements
+
+---
 
 - Single quotes, no semi
 - Auto fix for formatting (aimed to be used standalone **without** Prettier)
@@ -14,14 +26,14 @@
 - **Style principle**: Minimal for reading, stable for diff, consistent
 
 > [!IMPORTANT]
-> The main branch is for v1.0-beta, which rewrites to the new [ESLint Flat config](https://eslint.org/docs/latest/use/configure/configuration-files-new), check [#250](https://github.com/antfu/eslint-config/pull/250) for more details.
+> The main branch is for v1.0-beta, which rewrites to the new [ESLint Flat config](https://eslint.org/docs/latest/use/configure/configuration-files-new), check [#250](https://github.com/jannchie/eslint-config/pull/250) for more details.
 
 ## Usage
 
 ### Install
 
 ```bash
-pnpm i -D eslint @antfu/eslint-config
+pnpm i -D eslint @jannchie/eslint-config
 ```
 
 ### Create config file
@@ -30,18 +42,18 @@ With [`"type": "module"`](https://nodejs.org/api/packages.html#type) in `package
 
 ```js
 // eslint.config.js
-import antfu from '@antfu/eslint-config'
+import jannchie from '@jannchie/eslint-config'
 
-export default antfu()
+export default jannchie()
 ```
 
 With CJS:
 
 ```js
 // eslint.config.js
-const antfu = require('@antfu/eslint-config').default
+const jannchie = require('@jannchie/eslint-config').default
 
-module.exports = antfu()
+module.exports = jannchie()
 ```
 
 > Note that `.eslintignore` no longer works in Flat config, see [customization](#customization) for more details.
@@ -113,22 +125,22 @@ Add the following settings to your `.vscode/settings.json`:
 
 Since v1.0, we migrated to [ESLint Flat config](https://eslint.org/docs/latest/use/configure/configuration-files-new). It provides much better organization and composition.
 
-Normally you only need to import the `antfu` preset:
+Normally you only need to import the `jannchie` preset:
 
 ```js
 // eslint.config.js
-import antfu from '@antfu/eslint-config'
+import jannchie from '@jannchie/eslint-config'
 
-export default antfu()
+export default jannchie()
 ```
 
 And that's it! Or you can configure each integration individually, for example:
 
 ```js
 // eslint.config.js
-import antfu from '@antfu/eslint-config'
+import jannchie from '@jannchie/eslint-config'
 
-export default antfu({
+export default jannchie({
   // Enable stylistic formatting rules
   // stylistic: true,
 
@@ -154,15 +166,15 @@ export default antfu({
 })
 ```
 
-The `antfu` factory function also accepts any number of arbitrary custom config overrides:
+The `jannchie` factory function also accepts any number of arbitrary custom config overrides:
 
 ```js
 // eslint.config.js
-import antfu from '@antfu/eslint-config'
+import jannchie from '@jannchie/eslint-config'
 
-export default antfu(
+export default jannchie(
   {
-    // Configures for antfu's config
+    // Configures for jannchie's config
   },
 
   // From the second arguments they are ESLint Flat Configs
@@ -197,7 +209,7 @@ import {
   unicorn,
   vue,
   yaml,
-} from '@antfu/eslint-config'
+} from '@jannchie/eslint-config'
 
 export default [
   ...ignores(),
@@ -216,7 +228,7 @@ export default [
 ]
 ```
 
-Check out the [configs](https://github.com/antfu/eslint-config/blob/main/src/configs) and [factory](https://github.com/antfu/eslint-config/blob/main/src/factory.ts) for more details.
+Check out the [configs](https://github.com/jannchie/eslint-config/blob/main/src/configs) and [factory](https://github.com/jannchie/eslint-config/blob/main/src/factory.ts) for more details.
 
 > Thanks to [sxzz/eslint-config](https://github.com/sxzz/eslint-config) for the inspiration and reference.
 
@@ -248,9 +260,9 @@ Certain rules would only be enabled in specific files, for example, `ts/*` rules
 
 ```js
 // eslint.config.js
-import antfu from '@antfu/eslint-config'
+import jannchie from '@jannchie/eslint-config'
 
-export default antfu(
+export default jannchie(
   { vue: true, typescript: true },
   {
     // Remember to specify the file glob here, otherwise it might cause the vue plugin to handle non-vue files
@@ -272,9 +284,9 @@ We also provided an `overrides` options to make it easier:
 
 ```js
 // eslint.config.js
-import antfu from '@antfu/eslint-config'
+import jannchie from '@jannchie/eslint-config'
 
-export default antfu({
+export default jannchie({
   overrides: {
     vue: {
       'vue/operator-linebreak': ['error', 'before'],
@@ -294,9 +306,9 @@ You can optionally enable the [type aware rules](https://typescript-eslint.io/li
 
 ```js
 // eslint.config.js
-import antfu from '@antfu/eslint-config'
+import jannchie from '@jannchie/eslint-config'
 
-export default antfu({
+export default jannchie({
   typescript: {
     tsconfigPath: 'tsconfig.json',
   },
@@ -329,32 +341,32 @@ npm i -D lint-staged simple-git-hooks
 If you enjoy this code style, and would like to mention it in your project, here is the badge you can use:
 
 ```md
-[![code style](https://antfu.me/badge-code-style.svg)](https://github.com/antfu/eslint-config)
+[![code style](https://jannchie.me/badge-code-style.svg)](https://github.com/jannchie/eslint-config)
 ```
 
-[![code style](https://antfu.me/badge-code-style.svg)](https://github.com/antfu/eslint-config)
+[![code style](https://jannchie.me/badge-code-style.svg)](https://github.com/jannchie/eslint-config)
 
 ## FAQ
 
 ### Prettier?
 
-[Why I don't use Prettier](https://antfu.me/posts/why-not-prettier)
+[Why I don't use Prettier](https://jannchie.me/posts/why-not-prettier)
 
 ### How to lint CSS?
 
 This config does NOT lint CSS. I personally use [UnoCSS](https://github.com/unocss/unocss) so I don't write CSS. If you still prefer CSS, you can use [stylelint](https://stylelint.io/) for CSS linting.
 
-### I prefer XXX...
+### I prefer XXX
 
 Sure, you can config and override rules locally in your project to fit your needs. If that still does not work for you, you can always fork this repo and maintain your own.
 
 ## Check Also
 
-- [antfu/dotfiles](https://github.com/antfu/dotfiles) - My dotfiles
-- [antfu/vscode-settings](https://github.com/antfu/vscode-settings) - My VS Code settings
-- [antfu/ts-starter](https://github.com/antfu/ts-starter) - My starter template for TypeScript library
-- [antfu/vitesse](https://github.com/antfu/vitesse) - My starter template for Vue & Vite app
+- [jannchie/dotfiles](https://github.com/jannchie/dotfiles) - My dotfiles
+- [jannchie/vscode-settings](https://github.com/jannchie/vscode-settings) - My VS Code settings
+- [jannchie/ts-starter](https://github.com/jannchie/ts-starter) - My starter template for TypeScript library
+- [jannchie/vitesse](https://github.com/jannchie/vitesse) - My starter template for Vue & Vite app
 
 ## License
 
-[MIT](./LICENSE) License &copy; 2019-PRESENT [Anthony Fu](https://github.com/antfu)
+[MIT](./LICENSE)
