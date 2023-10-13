@@ -1,7 +1,7 @@
 {
   "name": "@jannchie/eslint-config",
   "type": "module",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "packageManager": "pnpm@8.8.0",
   "description": "Jannchie's ESLint config",
   "author": "Jianqi Pan <jannchie@gmail.com>",
@@ -38,6 +38,7 @@
   },
   "dependencies": {
     "@antfu/eslint-define-config": "^1.23.0-1",
+    "@next/eslint-plugin-next": "^13.5.4",
     "@stylistic/eslint-plugin": "0.0.8",
     "@typescript-eslint/eslint-plugin": "^6.7.4",
     "@typescript-eslint/parser": "^6.7.4",
@@ -50,6 +51,8 @@
     "eslint-plugin-markdown": "^3.0.1",
     "eslint-plugin-n": "^16.1.0",
     "eslint-plugin-no-only-tests": "^3.1.0",
+    "eslint-plugin-react": "^7.33.2",
+    "eslint-plugin-react-hooks": "^4.6.0",
     "eslint-plugin-unicorn": "^48.0.1",
     "eslint-plugin-unused-imports": "^3.0.0",
     "eslint-plugin-vitest": "^0.3.2",
