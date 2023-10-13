@@ -11,6 +11,7 @@ import {
   jsonc,
   markdown,
   node,
+  sortKeys,
   sortPackageJson,
   sortTsconfig,
   stylistic,
@@ -93,6 +94,9 @@ export function antfu(options: OptionsConfig & ConfigItem = {}, ...userConfigs: 
       stylistic: stylisticOptions,
     }),
     unicorn(),
+
+    // Optional plugins (not enabled by default)
+    sortKeys(),
   )
 
   if (enableVue) {
