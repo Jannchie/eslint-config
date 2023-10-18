@@ -11,6 +11,7 @@ import {
   jsonc,
   markdown,
   node,
+  react,
   sortKeys,
   sortPackageJson,
   sortTsconfig,
@@ -155,6 +156,10 @@ export function antfu(options: OptionsConfig & ConfigItem = {}, ...userConfigs: 
       componentExts,
       overrides: overrides.markdown,
     }))
+  }
+
+  if (options.react ?? true) {
+    configs.push(react())
   }
 
   if (options.jannchie ?? true) {

@@ -188,6 +188,11 @@ export interface OptionsConfig extends OptionsComponentExts {
   isInEditor?: boolean
 
   /**
+   * Enable react rules.
+   */
+  react?: boolean
+
+  /**
    * Enable Jannchie's rules.
    */
   jannchie?: boolean
