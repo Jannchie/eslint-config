@@ -26,6 +26,7 @@ type StylisticMergedRules = MergeIntersection<
   EslintRules &
   Unprefix<ReactRules, 'react/'> &
   Unprefix<TypeScriptRules, '@typescript-eslint/'>
+  & { 'jsx-self-closing-comp': ReactRules['react/self-closing-comp'] }
 >
 
 type StylisticRules = Pick<StylisticMergedRules, keyof UnprefixedRuleOptions>
@@ -128,7 +129,7 @@ export interface OptionsConfig extends OptionsComponentExts {
    *
    * @default auto-detect based on the dependencies
    */
-  typescript?: boolean | OptionsTypeScriptWithTypes
+  typescript?: boolean | OptionsTypeScriptWithTypes | OptionsTypeScriptParserOptions
 
   /**
    * Enable JSX related rules.

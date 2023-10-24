@@ -191,6 +191,11 @@ export default jannchie(
 
 Going more advanced, you can also import fine-grained configs and compose them as you wish:
 
+<details>
+<summary>Advanced Example</summary>
+
+We don't recommend using this style in general usages, as there are shared options between configs and might need extra care to make them consistent.
+
 ```js
 // eslint.config.js
 import {
@@ -213,13 +218,13 @@ import {
 
 export default [
   ...ignores(),
-  ...javascript(),
+  ...javascript(/* Options */),
   ...comments(),
   ...node(),
   ...jsdoc(),
   ...imports(),
   ...unicorn(),
-  ...typescript(),
+  ...typescript(/* Options */),
   ...stylistic(),
   ...vue(),
   ...jsonc(),
@@ -253,29 +258,6 @@ When you want to override rules, or disable them inline, you need to update to t
 +// eslint-disable-next-line ts/consistent-type-definitions
 type foo = { bar: 2 }
 ```
-
-### Optional Rules
-
-This config also provides some optional plugins/rules for extended usages.
-
-#### `sort-keys`
-
-This plugin [`eslint-plugin-sort-keys`](https://github.com/namnm/eslint-plugin-sort-keys) allows you to keep object keys sorted with auto-fix.
-
-It's installed but no rules are enabled by default. 
-
-It's recommended to opt-in on each file individually using [configuration comments](https://eslint.org/docs/latest/use/configure/rules#using-configuration-comments-1).
-
-```js
-/* eslint sort-keys/sort-keys-fix: "error" */
-const objectWantedToSort = {
-  a: 2,
-  b: 1,
-  c: 3,
-}
-/* eslint sort-keys/sort-keys-fix: "off" */
-```
-
 
 ### Rules Overrides
 
@@ -321,6 +303,28 @@ export default jannchie({
     // ...
   }
 })
+```
+
+### Optional Rules
+
+This config also provides some optional plugins/rules for extended usages.
+
+#### `sort-keys`
+
+This plugin [`eslint-plugin-sort-keys`](https://github.com/namnm/eslint-plugin-sort-keys) allows you to keep object keys sorted with auto-fix.
+
+It's installed but no rules are enabled by default. 
+
+It's recommended to opt-in on each file individually using [configuration comments](https://eslint.org/docs/latest/use/configure/rules#using-configuration-comments-1).
+
+```js
+/* eslint sort-keys/sort-keys-fix: "error" */
+const objectWantedToSort = {
+  a: 2,
+  b: 1,
+  c: 3,
+}
+/* eslint sort-keys/sort-keys-fix: "off" */
 ```
 
 ### Type Aware Rules

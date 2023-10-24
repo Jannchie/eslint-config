@@ -22,7 +22,7 @@ import {
   vue,
   yaml,
 } from './configs'
-import { jannchie } from './jannchie'
+import { jannchie as j } from './jannchie'
 import type { ConfigItem, OptionsConfig } from './types'
 import { combine } from './utils'
 
@@ -47,7 +47,7 @@ const VuePackages = [
 /**
  * Construct an array of ESLint flat config items.
  */
-export function antfu(options: OptionsConfig & ConfigItem = {}, ...userConfigs: (ConfigItem | ConfigItem[])[]) {
+export function jannchie(options: OptionsConfig & ConfigItem = {}, ...userConfigs: (ConfigItem | ConfigItem[])[]) {
   const {
     isInEditor = !!((process.env.VSCODE_PID || process.env.JETBRAINS_IDE) && !process.env.CI),
     vue: enableVue = VuePackages.some(i => isPackageExists(i)),
@@ -158,12 +158,12 @@ export function antfu(options: OptionsConfig & ConfigItem = {}, ...userConfigs: 
     }))
   }
 
-  if (options.react ?? true) {
+  if (options.react ?? false) { // disabled by default
     configs.push(react())
   }
 
   if (options.jannchie ?? true) {
-    configs.push(jannchie())
+    configs.push(j())
   }
 
   // User can optionally pass a flat config item to the first argument

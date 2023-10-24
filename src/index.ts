@@ -1,4 +1,4 @@
-import { antfu } from './factory'
+import { jannchie } from './factory'
 
 export * from './types'
 export * from './factory'
@@ -7,4 +7,4 @@ export * from './plugins'
 export * from './utils'
 export * from './globs'
 
-export default antfu
+export default jannchie
