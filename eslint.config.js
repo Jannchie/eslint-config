@@ -1,29 +1,3 @@
-// @ts-check
-import styleMigrate from '@stylistic/eslint-plugin-migrate'
-import jannchie from './dist/index.js'
+import antfu from '@antfu/eslint-config'
 
-export default jannchie(
-  {
-    vue: true,
-    typescript: true,
-    ignores: [
-      'fixtures',
-      '_fixtures',
-    ],
-  },
-  {
-    files: ['src/**/*.ts'],
-    rules: {
-      'sort-keys/sort-keys-fix': 'error',
-    },
-  },
-  {
-    files: ['src/configs/*.ts'],
-    plugins: {
-      'style-migrate': styleMigrate,
-    },
-    rules: {
-      'style-migrate/migrate': ['error', { namespaceTo: 'style' }],
-    },
-  },
-)
+export default antfu()
