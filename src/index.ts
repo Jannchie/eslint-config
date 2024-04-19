@@ -1,6 +1,7 @@
+import type { TypedFlatConfigItem } from '@antfu/eslint-config'
 import antfu, { GLOB_SRC, GLOB_VUE } from '@antfu/eslint-config'
 
-const jannchieRules = [
+const jannchieRules: TypedFlatConfigItem[] = [
   {
     files: [GLOB_VUE],
     name: 'jannchie:vue',
