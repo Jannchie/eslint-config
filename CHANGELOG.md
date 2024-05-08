@@ -9,7 +9,6 @@
 - **jannchie:** Add my rules ([3c0fd4c](https://github.com/Jannchie/antfu-eslint-config/commit/3c0fd4c))
 - **react:** Add react supports ([52cf150](https://github.com/Jannchie/antfu-eslint-config/commit/52cf150))
 
-
 ### ❤️ Contributors
 
 - Jianqi Pan ([@Jannchie](http://github.com/Jannchie))

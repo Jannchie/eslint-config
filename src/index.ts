@@ -1,5 +1,4 @@
-import type { TypedFlatConfigItem } from '@antfu/eslint-config'
-import antfu, { GLOB_SRC, GLOB_VUE } from '@antfu/eslint-config'
+import antfu, { GLOB_SRC, GLOB_VUE, type TypedFlatConfigItem } from '@antfu/eslint-config'
 
 const jannchieRules: TypedFlatConfigItem[] = [
   {
