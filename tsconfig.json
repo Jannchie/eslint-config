@@ -12,6 +12,7 @@
   },
   "include": [
     "**/*.ts",
-    "src/index.js"
+    "src/index.js",
+    "eslint.config.js"
   ]
 }

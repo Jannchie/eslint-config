@@ -17,12 +17,16 @@ const defaultOptions: OptionsConfig = {
 const jannchieRules: TypedFlatConfigItem[] = [
   {
     files: [GLOB_SRC, GLOB_VUE],
-    name: 'jannchie:src',
+    name: 'jannchie/src',
     rules: {
       'curly': ['error', 'multi-line'],
       'import/no-mutable-exports': 'off',
-      'style/brace-style': ['error', 'stroustrup', { allowSingleLine: false }],
-      '@stylistic/js/comma-dangle': ['error', 'always'],
+      '@stylistic/brace-style': ['error', 'stroustrup', { allowSingleLine: false }],
+      '@stylistic/comma-dangle': ['error', 'always-multiline'],
+      '@stylistic/array-element-newline': ['error', {
+        ArrayExpression: 'consistent',
+        ArrayPattern: { minItems: 3 },
+      }],
     },
   },
 ]

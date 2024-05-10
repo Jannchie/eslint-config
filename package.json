@@ -26,6 +26,7 @@
     "build": "tsup src/index.ts --format esm,cjs --clean --dts",
     "stub": "tsup src/index.ts --format esm",
     "dev": "tsup src/index.ts --format esm,cjs --watch & eslint-flat-config-viewer",
+    "ui": "npx @eslint/config-inspector --config eslint.config.js",
     "lint": "pnpm run stub && eslint .",
     "release": "bumpp && pnpm publish",
     "test": "vitest",
