@@ -31,8 +31,8 @@ const jannchieRules: TypedFlatConfigItem[] = [
   },
 ]
 export default function (...params: Parameters<typeof antfu>) {
-  if (params.length === 0) {
-    return antfu({ ...defaultOptions }, jannchieRules)
-  }
-  return antfu({ ...defaultOptions, ...params }, jannchieRules)
+  const paramsObj = params.reduce((acc, cur) => {
+    return { ...acc, ...cur }
+  }, {})
+  return antfu({ ...defaultOptions, ...paramsObj }, jannchieRules)
 };
