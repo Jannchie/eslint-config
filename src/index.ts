@@ -1,5 +1,7 @@
 import antfu, { GLOB_SRC, GLOB_VUE, type OptionsConfig, type TypedFlatConfigItem } from '@antfu/eslint-config'
 
+export * from '@antfu/eslint-config'
+
 const defaultOptions: OptionsConfig = {
   vue: {
     overrides: {
@@ -10,6 +12,11 @@ const defaultOptions: OptionsConfig = {
           max: 1,
         },
       }],
+    },
+  },
+  test: {
+    overrides: {
+      'test/prefer-lowercase-title': ['error', { lowercaseFirstCharacterOnly: false }],
     },
   },
 }
