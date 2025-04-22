@@ -1,4 +1,5 @@
-import antfu, { GLOB_SRC, GLOB_VUE, type OptionsConfig, type TypedFlatConfigItem } from '@antfu/eslint-config'
+import type { OptionsConfig, TypedFlatConfigItem } from '@antfu/eslint-config'
+import antfu, { GLOB_SRC, GLOB_VUE } from '@antfu/eslint-config'
 
 export * from '@antfu/eslint-config'
 
@@ -7,16 +8,22 @@ const defaultOptions: OptionsConfig = {
     overrides: {
       'vue/mustache-interpolation-spacing': ['error', 'always'],
       'vue/no-multi-spaces': ['error'],
-      'vue/max-attributes-per-line': ['error', {
-        multiline: {
-          max: 1,
+      'vue/max-attributes-per-line': [
+        'error',
+        {
+          multiline: {
+            max: 1,
+          },
         },
-      }],
+      ],
     },
   },
   test: {
     overrides: {
-      'test/prefer-lowercase-title': ['error', { lowercaseFirstCharacterOnly: false }],
+      'test/prefer-lowercase-title': [
+        'error',
+        { lowercaseFirstCharacterOnly: false },
+      ],
     },
   },
 }
@@ -28,18 +35,25 @@ const jannchieRules: TypedFlatConfigItem[] = [
     rules: {
       'curly': ['error', 'multi-line'],
       'import/no-mutable-exports': 'off',
-      '@stylistic/brace-style': ['error', 'stroustrup', { allowSingleLine: false }],
+      '@stylistic/brace-style': [
+        'error',
+        'stroustrup',
+        { allowSingleLine: false },
+      ],
       '@stylistic/comma-dangle': ['error', 'always-multiline'],
-      '@stylistic/array-element-newline': ['error', {
-        ArrayExpression: 'consistent',
-        ArrayPattern: { minItems: 3 },
-      }],
+      '@stylistic/array-element-newline': [
+        'error',
+        {
+          ArrayExpression: 'consistent',
+          ArrayPattern: { minItems: 3 },
+        },
+      ],
     },
   },
 ]
 export default function (...params: Parameters<typeof antfu>) {
   const paramsObj = params.reduce((acc, cur) => {
-    return { ...acc, ...cur }
+    return Object.assign({}, acc, cur)
   }, {})
   return antfu({ ...defaultOptions, ...paramsObj }, jannchieRules)
-};
+}
