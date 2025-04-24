@@ -4,19 +4,8 @@ import antfu, { GLOB_SRC, GLOB_VUE } from '@antfu/eslint-config'
 export * from '@antfu/eslint-config'
 
 const defaultOptions: OptionsConfig = {
-  vue: {
-    overrides: {
-      'vue/mustache-interpolation-spacing': ['error', 'always'],
-      'vue/no-multi-spaces': ['error'],
-      'vue/max-attributes-per-line': [
-        'error',
-        {
-          multiline: {
-            max: 1,
-          },
-        },
-      ],
-    },
+  unicorn: {
+    allRecommended: true,
   },
   test: {
     overrides: {
@@ -51,9 +40,30 @@ const jannchieRules: TypedFlatConfigItem[] = [
     },
   },
 ]
-export default function (...params: Parameters<typeof antfu>) {
-  const paramsObj = params.reduce((acc, cur) => {
-    return Object.assign({}, acc, cur)
-  }, {})
-  return antfu({ ...defaultOptions, ...paramsObj }, jannchieRules)
+
+const jannchieVueRules: TypedFlatConfigItem[] = [
+  {
+    files: [GLOB_VUE],
+    name: 'jannchie/vue',
+    rules: {
+      'vue/html-button-has-type': 'error',
+      'vue/mustache-interpolation-spacing': ['error', 'always'],
+      'vue/no-multi-spaces': ['error'],
+      'vue/max-attributes-per-line': [
+        'error',
+        {
+          multiline: {
+            max: 1,
+          },
+        },
+      ],
+    },
+  },
+]
+
+export default function jannchie(...parameters: Parameters<typeof antfu>): ReturnType<typeof antfu> {
+  const options = parameters[0]
+  const userConfigs = parameters.slice(1).filter(d => !!d)
+  const finalOptions = { ...defaultOptions, ...options }
+  return antfu(finalOptions, jannchieRules, finalOptions.vue ? jannchieVueRules : [], ...userConfigs)
 }

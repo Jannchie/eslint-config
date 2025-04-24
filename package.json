@@ -23,9 +23,9 @@
     "dist"
   ],
   "scripts": {
-    "build": "tsup src/index.ts --format esm,cjs --clean --dts",
-    "stub": "tsup src/index.ts --format esm",
-    "dev": "tsup src/index.ts --format esm,cjs --watch & eslint-flat-config-viewer",
+    "build": "tsup --clean --dts",
+    "stub": "tsup",
+    "dev": "tsup --watch & eslint-flat-config-viewer",
     "ui": "npx @eslint/config-inspector --config eslint.config.js",
     "lint": "pnpm run stub && eslint .",
     "release": "bumpp && pnpm publish",
@@ -69,6 +69,7 @@
     "@antfu/eslint-config": "^4.12.0"
   },
   "devDependencies": {
+    "tsup": "^8.4.0",
     "vitest": "^3.1.2"
   }
 }
