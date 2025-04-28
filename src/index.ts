@@ -37,6 +37,8 @@ const jannchieRules: TypedFlatConfigItem[] = [
           ArrayPattern: { minItems: 3 },
         },
       ],
+      'unicorn/filename-case': 'off',
+      'unicorn/prevent-abbreviations': 'off',
     },
   },
 ]
@@ -49,6 +51,9 @@ const jannchieVueRules: TypedFlatConfigItem[] = [
       'vue/html-button-has-type': 'error',
       'vue/mustache-interpolation-spacing': ['error', 'always'],
       'vue/no-multi-spaces': ['error'],
+      'vue/return-in-computed-property': ['error', {
+        treatUndefinedAsUnspecified: false,
+      }],
       'vue/max-attributes-per-line': [
         'error',
         {
