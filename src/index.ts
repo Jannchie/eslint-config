@@ -39,6 +39,7 @@ const jannchieRules: TypedFlatConfigItem[] = [
       ],
       'unicorn/filename-case': 'off',
       'unicorn/prevent-abbreviations': 'off',
+      'unicorn/no-null': 'off',
     },
   },
 ]
