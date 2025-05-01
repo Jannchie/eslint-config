@@ -37,10 +37,15 @@ const jannchieRules: TypedFlatConfigItem[] = [
           ArrayPattern: { minItems: 3 },
         },
       ],
-      'unicorn/filename-case': 'off',
       'unicorn/prevent-abbreviations': 'off',
       'unicorn/no-null': 'off',
       'unicorn/no-useless-undefined': ['error', { checkArguments: false }],
+    },
+  },
+  {
+    name: 'jannchie/general',
+    rules: {
+      'unicorn/filename-case': 'off',
     },
   },
 ]
