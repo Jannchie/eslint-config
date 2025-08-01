@@ -1,3 +1,11 @@
+## v3.7.0
+
+[v3.6.2...v3.7.0](https://github.com/jannchie/eslint-config/compare/v3.6.2...v3.7.0)
+
+### :sparkles: Features
+
+- **config**: disable indent-binary-ops rule - By [Jannchie](mailto:jannchie@gmail.com) in [3e27253](https://github.com/jannchie/eslint-config/commit/3e27253)
+
 ## v3.6.2
 
 [v3.6.1...v3.6.2](https://github.com/jannchie/eslint-config/compare/v3.6.1...v3.6.2)
