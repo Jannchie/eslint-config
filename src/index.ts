@@ -40,6 +40,7 @@ const jannchieRules: TypedFlatConfigItem[] = [
       'unicorn/prevent-abbreviations': 'off',
       'unicorn/no-null': 'off',
       'unicorn/no-useless-undefined': ['error', { checkArguments: false }],
+      'style/indent-binary-ops': 'off',
     },
   },
   {
