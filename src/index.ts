@@ -77,5 +77,6 @@ export default function jannchie(...parameters: Parameters<typeof antfu>): Retur
   const options = parameters[0]
   const userConfigs = parameters.slice(1).filter(d => !!d)
   const finalOptions = { ...defaultOptions, ...options }
-  return antfu(finalOptions, jannchieRules, finalOptions.vue ? jannchieVueRules : [], ...userConfigs)
+  const jannchieFinalRules = finalOptions.vue ? [...jannchieRules, ...jannchieVueRules] : jannchieRules
+  return antfu(finalOptions, ...jannchieFinalRules, ...userConfigs)
 }
