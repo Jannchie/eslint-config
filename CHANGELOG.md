@@ -1,3 +1,11 @@
+## v3.7.1
+
+[v3.7.0...v3.7.1](https://github.com/jannchie/eslint-config/compare/v3.7.0...v3.7.1)
+
+### :wrench: Chores
+
+- **deps**: update dependencies in lockfile and package - By [Jannchie](mailto:jannchie@gmail.com) in [f3a6a56](https://github.com/jannchie/eslint-config/commit/f3a6a56)
+
 ## v3.7.0
 
 [v3.6.2...v3.7.0](https://github.com/jannchie/eslint-config/compare/v3.6.2...v3.7.0)
