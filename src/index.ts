@@ -75,8 +75,7 @@ const jannchieVueRules: TypedFlatConfigItem[] = [
 ]
 
 export default function jannchie(...parameters: Parameters<typeof antfu>): ReturnType<typeof antfu> {
-  const options = parameters[0]
-  const userConfigs = parameters.slice(1).filter(d => !!d)
+  const [options, ...userConfigs] = parameters
   const finalOptions = { ...defaultOptions, ...options }
   const jannchieFinalRules = finalOptions.vue ? [...jannchieRules, ...jannchieVueRules] : jannchieRules
   return antfu(finalOptions, ...jannchieFinalRules, ...userConfigs)
