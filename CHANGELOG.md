@@ -1,3 +1,15 @@
+## v3.7.3
+
+[v3.7.2...v3.7.3](https://github.com/Jannchie/eslint-config/compare/v3.7.2...v3.7.3)
+
+### :art: Refactors
+
+- **index**: simplify parameters destructuring - By [Jianqi Pan](mailto:jannchie@gmail.com) in [0eb4a73](https://github.com/Jannchie/eslint-config/commit/0eb4a73)
+
+### :wrench: Chores
+
+- **release**: bump version to 3.7.2 && update dependencies - By [Jianqi Pan](mailto:jannchie@gmail.com) in [71a989b](https://github.com/Jannchie/eslint-config/commit/71a989b)
+
 ## v3.7.2
 
 [v3.7.2...v3.7.2](https://github.com/Jannchie/eslint-config/compare/v3.7.2...v3.7.2)
