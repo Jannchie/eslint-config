@@ -1,7 +1,7 @@
 {
   "name": "@jannchie/eslint-config",
   "type": "module",
-  "version": "3.7.1",
+  "version": "3.7.2",
   "packageManager": "pnpm@8.8.0",
   "description": "Jannchie's ESLint config",
   "author": "Jianqi Pan <jannchie@gmail.com>",
@@ -66,10 +66,10 @@
     }
   },
   "dependencies": {
-    "@antfu/eslint-config": "^5.2.1"
+    "@antfu/eslint-config": "^6.4.1"
   },
   "devDependencies": {
-    "tsup": "^8.5.0",
-    "vitest": "^3.2.4"
+    "tsup": "^8.5.1",
+    "vitest": "^4.0.15"
   }
 }
