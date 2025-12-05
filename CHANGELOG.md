@@ -1,3 +1,12 @@
+## v3.7.4
+
+[v3.7.3...v3.7.4](https://github.com/jannchie/eslint-config/compare/v3.7.3...v3.7.4)
+
+### :wrench: Chores
+
+- **deps**: add eslint-plugin-react-hooks devDependency - By [Jannchie](mailto:jannchie@gmail.com) in [029b485](https://github.com/jannchie/eslint-config/commit/029b485)
+- **deps**: update peerDependencies and lockfile - By [Jannchie](mailto:jannchie@gmail.com) in [72e9970](https://github.com/jannchie/eslint-config/commit/72e9970)
+
 ## v3.7.3
 
 [v3.7.2...v3.7.3](https://github.com/Jannchie/eslint-config/compare/v3.7.2...v3.7.3)
