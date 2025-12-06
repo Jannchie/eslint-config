@@ -41,12 +41,16 @@ const jannchieRules: TypedFlatConfigItem[] = [
       'unicorn/no-null': 'off',
       'unicorn/no-useless-undefined': ['error', { checkArguments: false }],
       'style/indent-binary-ops': 'off',
+      'node/prefer-global/process': 'off',
     },
   },
   {
     name: 'jannchie/general',
     rules: {
       'unicorn/filename-case': 'off',
+      'pnpm/json-enforce-catalog': 'off',
+      'pnpm/json-prefer-workspace-settings': 'off',
+      'pnpm/json-valid-catalog': 'off',
     },
   },
 ]
