@@ -48,6 +48,7 @@ const jannchieRules: TypedFlatConfigItem[] = [
     name: 'jannchie/general',
     rules: {
       'unicorn/filename-case': 'off',
+      'unicorn/expiring-todo-comments': 'off',
       'pnpm/json-enforce-catalog': 'off',
       'pnpm/json-prefer-workspace-settings': 'off',
       'pnpm/json-valid-catalog': 'off',
