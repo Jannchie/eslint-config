@@ -1,3 +1,11 @@
+## v3.7.6
+
+[v3.7.5...v3.7.6](https://github.com/jannchie/eslint-config/compare/v3.7.5...v3.7.6)
+
+### :wrench: Chores
+
+- **deps**: upgrade eslint related deps and pin peer compatibilities - By [Jannchie](mailto:jannchie@gmail.com) in [b0ed4f7](https://github.com/jannchie/eslint-config/commit/b0ed4f7)
+
 ## v3.7.5
 
 [v3.7.4...v3.7.5](https://github.com/jannchie/eslint-config/compare/v3.7.4...v3.7.5)
