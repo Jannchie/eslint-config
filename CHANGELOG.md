@@ -1,3 +1,11 @@
+## v3.7.7
+
+[v3.7.6...v3.7.7](https://github.com/jannchie/eslint-config/compare/v3.7.6...v3.7.7)
+
+### :wrench: Chores
+
+- **deps**: bump eslint-related deps and antfu config; update lockfile and tsconfig cleanup - By [Jannchie](mailto:jannchie@gmail.com) in [0d615bc](https://github.com/jannchie/eslint-config/commit/0d615bc)
+
 ## v3.7.6
 
 [v3.7.5...v3.7.6](https://github.com/jannchie/eslint-config/compare/v3.7.5...v3.7.6)
