@@ -1,3 +1,11 @@
+## v3.7.8
+
+[v3.7.7...v3.7.8](https://github.com/jannchie/eslint-config/compare/v3.7.7...v3.7.8)
+
+### :wrench: Chores
+
+- **eslint**: disable additional lint rules - By [Jannchie](mailto:jannchie@gmail.com) in [04d4413](https://github.com/jannchie/eslint-config/commit/04d4413)
+
 ## v3.7.7
 
 [v3.7.6...v3.7.7](https://github.com/jannchie/eslint-config/compare/v3.7.6...v3.7.7)
