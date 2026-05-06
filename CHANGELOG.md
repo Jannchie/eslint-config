@@ -1,3 +1,11 @@
+## v3.7.9
+
+[v3.7.8...v3.7.9](https://github.com/jannchie/eslint-config/compare/v3.7.8...v3.7.9)
+
+### :wrench: Chores
+
+- **eslint**: set ArrayPattern to consistent && disable style/array-element-newline - By [Jannchie](mailto:jannchie@gmail.com) in [7a8b16f](https://github.com/jannchie/eslint-config/commit/7a8b16f)
+
 ## v3.7.8
 
 [v3.7.7...v3.7.8](https://github.com/jannchie/eslint-config/compare/v3.7.7...v3.7.8)
