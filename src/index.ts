@@ -34,7 +34,7 @@ const jannchieRules: TypedFlatConfigItem[] = [
         'error',
         {
           ArrayExpression: 'consistent',
-          ArrayPattern: { minItems: 3 },
+          ArrayPattern: 'consistent',
         },
       ],
       'unicorn/no-unreadable-array-destructuring': 'off',
@@ -66,6 +66,7 @@ const jannchieRules: TypedFlatConfigItem[] = [
       'pnpm/json-enforce-catalog': 'off',
       'pnpm/json-prefer-workspace-settings': 'off',
       'pnpm/json-valid-catalog': 'off',
+      'style/array-element-newline': 'off',
     },
   },
 ]
